@@ -15,7 +15,7 @@ namespace CourseWork
 			stopwatch.Start();
 			calculations.CalculateConsistent();
 			stopwatch.Stop();
-			Console.WriteLine(stopwatch.ElapsedMilliseconds);
+			Console.WriteLine("Consistent: "+stopwatch.ElapsedMilliseconds);
 			stopwatch.Reset();
 			calculations.CalculateParallel();
 			absoluteError=errors.CalculateAbsoluteError(calculations.exactSolution, 
