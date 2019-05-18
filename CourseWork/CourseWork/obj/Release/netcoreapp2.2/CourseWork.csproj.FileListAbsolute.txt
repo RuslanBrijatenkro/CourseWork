@@ -1,0 +1,10 @@
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Release\netcoreapp2.2\CourseWork.deps.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Release\netcoreapp2.2\CourseWork.runtimeconfig.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Release\netcoreapp2.2\CourseWork.runtimeconfig.dev.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Release\netcoreapp2.2\CourseWork.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Release\netcoreapp2.2\CourseWork.pdb
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Release\netcoreapp2.2\CourseWork.csproj.CoreCompileInputs.cache
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Release\netcoreapp2.2\CourseWork.AssemblyInfoInputs.cache
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Release\netcoreapp2.2\CourseWork.AssemblyInfo.cs
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Release\netcoreapp2.2\CourseWork.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Release\netcoreapp2.2\CourseWork.pdb

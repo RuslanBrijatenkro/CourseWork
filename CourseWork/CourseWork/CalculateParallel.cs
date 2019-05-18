@@ -7,7 +7,7 @@ namespace CourseWork
 		async public void CalculateParallel()
 		{
 			stopwatch.Start();
-			for (int i = 0; i < 4; i++)
+			for (int i = 0; i < processorCount; i++)
 			{
 				awaitList.Add(Task.Factory.StartNew(delegate () { ExactSolutionParallel(taskNumber++); }));
 			}

@@ -4,7 +4,6 @@ namespace CourseWork
 {
 	class View
 	{
-
 		public void Writer(string path,double[,] solution)
 		{
 			using (StreamWriter writer = new StreamWriter(path))

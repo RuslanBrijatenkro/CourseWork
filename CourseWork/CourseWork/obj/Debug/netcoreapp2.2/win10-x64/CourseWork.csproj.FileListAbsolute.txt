@@ -1,0 +1,14 @@
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\hostpolicy.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\hostfxr.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.exe
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.deps.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.runtimeconfig.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.runtimeconfig.dev.json
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\bin\Debug\netcoreapp2.2\win10-x64\CourseWork.pdb
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.csprojAssemblyReference.cache
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.csproj.CoreCompileInputs.cache
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.AssemblyInfoInputs.cache
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.AssemblyInfo.cs
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.dll
+C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\obj\Debug\netcoreapp2.2\win10-x64\CourseWork.pdb

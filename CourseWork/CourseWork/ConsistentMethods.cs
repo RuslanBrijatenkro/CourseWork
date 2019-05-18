@@ -30,8 +30,8 @@ namespace CourseWork
 						1d / xSteps,
 						1d / tSteps
 					);
-					if (appoximateSolution[k, i] - exactSolution[k, i] > 0.01d)
-						Console.WriteLine(appoximateSolution[k, i]+" != "+ exactSolution[k, i]);
+					//if (appoximateSolution[k, i] - exactSolution[k, i] > 0.01d)
+					//	Console.WriteLine(appoximateSolution[k, i]+" != "+ exactSolution[k, i]);
 
 				}
 			}

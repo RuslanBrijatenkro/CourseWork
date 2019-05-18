@@ -8,15 +8,15 @@ namespace CourseWork
 	{
 		void ExactSolutionParallel(int taskNumber)
 		{
-			int startIndex = taskNumber * (tSteps / 4);
+			int startIndex = taskNumber * (tSteps / processorCount);
 			int endIndex;
-			if (taskNumber == 3)
+			if (taskNumber == processorCount - 1)
 			{
 				endIndex = tSteps;
 			}
 			else
 			{
-				endIndex = startIndex + tSteps / 4;
+				endIndex = startIndex + tSteps / processorCount;
 			}
 			double tLocal = (double)startIndex / tSteps;
 			double xLocal;

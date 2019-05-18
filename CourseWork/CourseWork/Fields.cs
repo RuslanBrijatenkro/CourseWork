@@ -6,14 +6,15 @@ namespace CourseWork
 {
 	partial class Calculations
 	{
+		int processorCount = 4;
 		static Stopwatch stopwatch = new Stopwatch();
 		View view = new View();
 		object newObject = new object();
 		int taskNumber = 0;
 		double x = 0;
 		double t = 0;
-		const int xSteps = 10;
-		const int tSteps = 700;
+		const int xSteps = 100;
+		const int tSteps = 20000;
 		Solutions solutions = new Solutions();
 		public double[,] exactSolution = new double[tSteps, xSteps];
 		public double[,] appoximateSolution = new double[tSteps, xSteps];
