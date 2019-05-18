@@ -6,6 +6,7 @@ namespace CourseWork
 	{
 		async public void CalculateParallel()
 		{
+			stopwatch.Start();
 			for (int i = 0; i < 4; i++)
 			{
 				awaitList.Add(Task.Factory.StartNew(delegate () { ExactSolutionParallel(taskNumber++); }));
@@ -22,9 +23,11 @@ namespace CourseWork
 				appoximateSolutionParallel[i, xSteps - 1] = solutions.GetExactSolution(1, tLocal);
 			});
 			ApproximateSolutionParallel();
+			stopwatch.Stop();
 			view.Writer("C:/Users/brija/Desktop/3.txt", appoximateSolutionParallel);
 			view.Writer("C:/Users/brija/Desktop/4.txt", exactSolutionParallel);
-
+			System.Console.WriteLine($"Parallel:{stopwatch.ElapsedMilliseconds}");
 		}
+
 	}
 }
