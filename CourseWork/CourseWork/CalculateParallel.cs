@@ -21,7 +21,10 @@ namespace CourseWork
 				appoximateSolutionParallel[i, 0] = solutions.GetExactSolution(0, tLocal);
 				appoximateSolutionParallel[i, xSteps - 1] = solutions.GetExactSolution(1, tLocal);
 			});
-			ApproximateSolutionParallel(); ;
+			ApproximateSolutionParallel();
+			view.Writer("C:/Users/brija/Desktop/3.txt", appoximateSolutionParallel);
+			view.Writer("C:/Users/brija/Desktop/4.txt", exactSolutionParallel);
+
 		}
 	}
 }

@@ -4,20 +4,25 @@ namespace CourseWork
 {
 	class View
 	{
-		Calculations calculations;
-
-		public View(Calculations calculations)
+		public void Writer(string path,double[,] solution)
 		{
-			this.calculations = calculations;
-		}
-		public void Writer()
-		{
-			using (StreamWriter writer = new StreamWriter("C:/Users/brija/Desktop/1.txt"))
+			using (StreamWriter writer = new StreamWriter(path))
 			{
-				foreach(var number in calculations.appoximateSolution)
+				writer.Write("{");
+				for(int i=0;i<200;i++)
 				{
-					writer.Write(number+" ");
+					writer.Write("{");
+					for (int j = 0; j < 10; j++)
+					{
+						writer.Write(solution[i,j]);
+						if (j != 9)
+							writer.Write(",");
+					}
+					writer.Write("}");
+					if (i != 199)
+						writer.Write(",");
 				}
+				writer.Write("}");
 			}
 		}
 	}

@@ -5,6 +5,7 @@ namespace CourseWork
 {
 	partial class Calculations
 	{
+		View view = new View();
 		object newObject = new object();
 		int taskNumber = 0;
 		double x = 0;

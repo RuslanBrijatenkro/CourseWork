@@ -12,6 +12,8 @@ namespace CourseWork
 			InitialConditions();
 			BoundaryConditions();
 			ApproximateSolution();
+			view.Writer("C:/Users/brija/Desktop/1.txt", exactSolution);
+			view.Writer("C:/Users/brija/Desktop/2.txt", appoximateSolution);
 		}
 	}
 }

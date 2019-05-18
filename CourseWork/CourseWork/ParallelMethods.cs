@@ -37,15 +37,13 @@ namespace CourseWork
 			{
 				Parallel.For(1, xSteps - 1, (int i) =>
 				{
-					appoximateSolution[k, i] = solutions.GetApproximateSolution(
-						appoximateSolution[k - 1, i - 1],
-						appoximateSolution[k - 1, i + 1],
-						appoximateSolution[k - 1, i],
+					Interlocked.Exchange(ref appoximateSolutionParallel[k, i], solutions.GetApproximateSolution(
+						appoximateSolutionParallel[k - 1, i - 1],
+						appoximateSolutionParallel[k - 1, i + 1],
+						appoximateSolutionParallel[k - 1, i],
 						1d / xSteps,
 						1d / tSteps
-					);
-					//if (appoximateSolution[k, i] - exactSolution[k, i] > 0.01d)
-					//	Console.WriteLine($"{k}:{i}" + false);
+					));
 				});
 			}
 		}

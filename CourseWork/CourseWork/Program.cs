@@ -10,10 +10,9 @@ namespace CourseWork
 		static void Main(string[] args)
 		{
 			Calculations calculations = new Calculations();
-			View view = new View(calculations);
+			View view = new View();
 			calculations.CalculateConsistent();
 			calculations.CalculateParallel();
-			view.Writer();
 			Console.ReadKey();
 		}
 	}

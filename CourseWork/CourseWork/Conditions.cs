@@ -4,26 +4,15 @@
 	{
 		void InitialConditions()
 		{
-			t = 0d;
-			for (int k = 0; k < tSteps; k++)
-			{
-				x = 0d;
-				for (int i = 0; i < xSteps; i++)
-				{
-					exactSolution[k, i] = solutions.GetExactSolution(x, t);
-					x += 1d / xSteps;
-				}
-				t += 1d / tSteps;
-			}
-		}
-		void BoundaryConditions()
-		{
 			x = 0d;
 			for (int i = 0; i < xSteps; i++)
 			{
 				appoximateSolution[0, i] = solutions.GetExactSolution(x, 0);
 				x += 1d / xSteps;
 			}
+		}
+		void BoundaryConditions()
+		{
 			t = 0d;
 			for (int i = 0; i < tSteps; i++)
 			{
