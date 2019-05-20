@@ -1,30 +1,35 @@
 ﻿using System;
-using System.Diagnostics;
+
 namespace CourseWork
 {
 	class Program
 	{
-		static Stopwatch stopwatch = new Stopwatch();
 		static void Main(string[] args)
 		{
-			double absoluteError;
-			double relativeError;
+			string mathematicaPath = @"C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\results\1.nb";
+			Timer timer = new Timer();
 			Errors errors = new Errors();
 			Calculations calculations = new Calculations();
-			View view = new View();
-			stopwatch.Start();
-			calculations.CalculateConsistent();
-			stopwatch.Stop();
-			Console.WriteLine("Consistent: "+stopwatch.ElapsedMilliseconds);
-			stopwatch.Reset();
-			calculations.CalculateParallel();
-			absoluteError=errors.CalculateAbsoluteError(calculations.exactSolution, 
-													    calculations.appoximateSolution, 
-													    calculations.GetxSteps, 
-													    calculations.GettSteps);
-			relativeError = errors.CalculateRelativeError(calculations.exactSolution);
-			Console.WriteLine(absoluteError);
-			Console.WriteLine(relativeError);
+			View view = new View(calculations,mathematicaPath);
+			long time;
+
+			time = timer.StartWork(calculations.CalculateConsistent);
+			Console.WriteLine($"Consistent:{time} ms");
+
+			time = timer.StartWork(calculations.CalculateParallel);
+			Console.WriteLine($"Parallel:{time} ms");
+
+			view.WriteResults();
+
+			errors.CalculateAbsoluteError(
+				calculations.exactSolution,
+				calculations.approximateSolution,
+				calculations.GetxSteps,
+				calculations.GettSteps
+			);
+
+			errors.CalculateRelativeError(calculations.exactSolution);
+
 			Console.ReadKey();
 		}
 	}

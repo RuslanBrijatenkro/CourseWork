@@ -4,28 +4,31 @@ namespace CourseWork
 {
 	class Errors
 	{
+		double relativeError;
 		int kMax;
 		int iMax;
 		double maxDifference;
-		public double CalculateAbsoluteError(double[,] matrix1, double[,] matrix2, int xSteps, int tSteps)
+		public void CalculateAbsoluteError(double[,] exactCondition, double[,] approximateCondition, int xSteps, int tSteps)
 		{
 			for (int k = 0; k < tSteps; k++)
 			{
-				for (int i = 0; i < xSteps ; i++)
+				for (int i = 0; i < xSteps; i++)
 				{
-					if (Abs(matrix2[k,i] - matrix1[k,i]) > maxDifference)
+					if (Abs(approximateCondition[k, i] - exactCondition[k, i]) > maxDifference)
 					{
-						maxDifference = Abs(matrix2[k,i] - matrix1[k,i]);
+						maxDifference = Abs(approximateCondition[k, i] - exactCondition[k, i]);
 						kMax = k;
 						iMax = i;
 					}
 				}
 			}
-			return maxDifference;
+			Console.WriteLine($"Absolute error: {maxDifference}");
+
 		}
-		public double CalculateRelativeError(double[,] matrix)
+		public void CalculateRelativeError(double[,] matrix)
 		{
-			return maxDifference / matrix[kMax,iMax];
+			relativeError = maxDifference / matrix[kMax, iMax];
+			Console.WriteLine($"Relative error: {relativeError}");
 		}
 	}
 }

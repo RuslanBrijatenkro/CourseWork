@@ -6,15 +6,16 @@ namespace CourseWork
 	{
 		void ExactSolution()
 		{
+			t = 0d;
 			for (int k = 0; k < tSteps; k++)
 			{
 				x = 0d;
 				for (int i = 0; i < xSteps; i++)
 				{
 					exactSolution[k, i] = solutions.GetExactSolution(x, t);
-					x += 1d / xSteps;
+					x += h;
 				}
-				t += 1d / tSteps;
+				t += tau;
 			}
 		}
 		void ApproximateSolution()
@@ -23,16 +24,16 @@ namespace CourseWork
 			{
 				for (int i = 1; i < xSteps - 1; i++)
 				{
-					appoximateSolution[k, i] = solutions.GetApproximateSolution(
-						appoximateSolution[k - 1, i - 1],
-						appoximateSolution[k - 1, i + 1],
-						appoximateSolution[k - 1, i],
-						1d / xSteps,
-						1d / tSteps
+					approximateSolution[k, i] = solutions.GetApproximateSolution(
+						approximateSolution[k - 1, i - 1],
+						approximateSolution[k - 1, i + 1],
+						approximateSolution[k - 1, i],
+						h,
+						tau
 					);
 
-					if (Math.Abs(appoximateSolution[k, i] - exactSolution[k, i]) > 0.028256d)
-						Console.WriteLine("Approximate: "+appoximateSolution[k, i]+" != "+ "Exact: "+exactSolution[k, i]);
+					if (Math.Abs(approximateSolution[k, i] - exactSolution[k, i]) > 0.05)
+						Console.WriteLine("Approximate: " + approximateSolution[k, i] + " != " + "Exact: " + exactSolution[k, i]);
 
 				}
 			}

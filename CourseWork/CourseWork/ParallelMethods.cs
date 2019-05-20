@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace CourseWork
 {
@@ -25,10 +23,10 @@ namespace CourseWork
 				xLocal = 0d;
 				for (int i = 0; i < xSteps; i++)
 				{
-					Interlocked.Exchange(ref exactSolutionParallel[k, i], solutions.GetExactSolution(xLocal, tLocal));
-					xLocal += 1d / xSteps;
+					exactSolutionParallel[k, i] = solutions.GetExactSolution(xLocal, tLocal);
+					xLocal += h;
 				}
-				tLocal += 1d / tSteps;
+				tLocal += tau;
 			}
 		}
 		void ApproximateSolutionParallel()
@@ -37,13 +35,13 @@ namespace CourseWork
 			{
 				Parallel.For(1, xSteps - 1, (int i) =>
 				{
-					Interlocked.Exchange(ref appoximateSolutionParallel[k, i], solutions.GetApproximateSolution(
-						appoximateSolutionParallel[k - 1, i - 1],
-						appoximateSolutionParallel[k - 1, i + 1],
-						appoximateSolutionParallel[k - 1, i],
-						1d / xSteps,
-						1d / tSteps
-					));
+					approximateSolutionParallel[k, i] = solutions.GetApproximateSolution(
+						approximateSolutionParallel[k - 1, i - 1],
+						approximateSolutionParallel[k - 1, i + 1],
+						approximateSolutionParallel[k - 1, i],
+						h,
+						tau
+					);
 				});
 			}
 		}

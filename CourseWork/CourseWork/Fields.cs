@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading.Tasks;
 
 namespace CourseWork
@@ -7,20 +6,19 @@ namespace CourseWork
 	partial class Calculations
 	{
 		int processorCount = 4;
-		static Stopwatch stopwatch = new Stopwatch();
-		View view = new View();
-		object newObject = new object();
 		int taskNumber = 0;
-		double x = 0;
-		double t = 0;
-		const int xSteps = 100;
-		const int tSteps = 20000;
+		double x;
+		double t;
+		const int xSteps = 21;
+		const int tSteps = 801;
+		double h = 1d / (xSteps - 1);
+		double tau = 1d / (tSteps - 1);
 		Solutions solutions = new Solutions();
 		public double[,] exactSolution = new double[tSteps, xSteps];
-		public double[,] appoximateSolution = new double[tSteps, xSteps];
+		public double[,] approximateSolution = new double[tSteps, xSteps];
 		public double[,] exactSolutionParallel = new double[tSteps, xSteps];
-		public double[,] appoximateSolutionParallel = new double[tSteps, xSteps];
-		List<Task> awaitList = new List<Task>();
+		public double[,] approximateSolutionParallel = new double[tSteps, xSteps];
+		List<Task> awaitTasks = new List<Task>();
 		public int GetxSteps
 		{
 			get { return xSteps; }
