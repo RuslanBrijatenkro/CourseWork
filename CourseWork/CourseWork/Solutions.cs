@@ -15,7 +15,7 @@ namespace CourseWork
 		}
 		public double GetApproximateSolution(double wPrev, double wNext, double wCurrent, double h, double tau)
 		{
-			return wCurrent + (tau * (wPrev - 2d * wCurrent + wNext) - tau * Pow(h, 2) * wCurrent * (1 - wCurrent) * (2 - wCurrent)) / Pow(h, 2);
+			return wCurrent + tau * ((wPrev - 2 * wCurrent + wNext) / Pow(h, 2) - a * wCurrent * (b - wCurrent) * (c - wCurrent));
 		}
 	}
 }

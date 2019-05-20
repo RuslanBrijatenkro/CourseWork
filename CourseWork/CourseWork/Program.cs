@@ -6,7 +6,7 @@ namespace CourseWork
 	{
 		static void Main(string[] args)
 		{
-			string mathematicaPath = @"C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\results\1.nb";
+			string mathematicaPath = @"C:\Users\brija\Desktop\CourseWork\CourseWork\CourseWork\results\3.nb";
 			Timer timer = new Timer();
 			Errors errors = new Errors();
 			Calculations calculations = new Calculations();

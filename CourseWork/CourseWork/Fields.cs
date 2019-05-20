@@ -9,8 +9,8 @@ namespace CourseWork
 		int taskNumber = 0;
 		double x;
 		double t;
-		const int xSteps = 21;
-		const int tSteps = 801;
+		const int xSteps = 51;
+		const int tSteps = 5001;
 		double h = 1d / (xSteps - 1);
 		double tau = 1d / (tSteps - 1);
 		Solutions solutions = new Solutions();

@@ -6,7 +6,7 @@ namespace CourseWork
 	{
 		public void CalculateParallel()
 		{
-			Task.Factory.StartNew(ExactSolution).Wait();
+			Task.Factory.StartNew(ExactSolutionAsync).Wait();
 			InitialConditionsParallel();
 			BoundaryConditionsParallel();
 			ApproximateSolutionParallel();
